@@ -19,6 +19,17 @@ All analyses are stored in the [/analyses](https://github.com/andersonrm/gut_con
 
 Meta data describing all columns can be found in [/data/meta_data](https://github.com/andersonrm/gut_contents_of_BLH_in_potato/tree/main/data/meta_data)
 
+## Packages required:
+[tidyverse](https://cran.r-project.org/web/packages/tidyverse/index.html)
+[cowplot](https://cran.r-project.org/web/packages/cowplot/index.html)
+[vegan](https://cran.r-project.org/web/packages/vegan/index.html)
+[sjPlot](https://cran.r-project.org/web/packages/sjPlot/index.html)
+[ggridges](https://cran.r-project.org/web/packages/ggridges/index.html)
+[knitr](https://cran.r-project.org/web/packages/knitr/index.html)
+[ggExtra](https://cran.r-project.org/web/packages/ggExtra/index.html)
+[ggrepel](https://cran.r-project.org/web/packages/ggrepel/index.html)
+[gamm4](https://cran.r-project.org/web/packages/gamm4/index.html)
+
 ## Funding:
 This research was funded by (Need to add this info)
 

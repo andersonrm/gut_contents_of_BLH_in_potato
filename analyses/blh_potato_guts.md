@@ -350,11 +350,11 @@ dat1 %>% uncount(blh_mix_count) %>%
     ## adonis2(formula = gut_mat_species ~ splines::ns(sample_date, df = 5) + BCTV * Year + CPt + region, data = gut_matrix, strata = gut_matrix$host_plant)
     ##                                   Df SumOfSqs      R2       F Pr(>F)    
     ## splines::ns(sample_date, df = 5)   5   10.070 0.16580 10.6289  0.001 ***
-    ## BCTV                               1    0.763 0.01257  4.0286  0.001 ***
+    ## BCTV                               1    0.763 0.01257  4.0286  0.003 ** 
     ## Year                               2    8.156 0.13429 21.5222  0.001 ***
-    ## CPt                                1    0.312 0.00513  1.6459  0.261    
-    ## region                             4    0.987 0.01625  1.3023  0.498    
-    ## BCTV:Year                          2    0.656 0.01080  1.7305  0.173    
+    ## CPt                                1    0.312 0.00513  1.6459  0.239    
+    ## region                             4    0.987 0.01625  1.3023  0.502    
+    ## BCTV:Year                          2    0.656 0.01080  1.7305  0.183    
     ## Residual                         210   39.790 0.65516                   
     ## Total                            225   60.733 1.00000                   
     ## ---
@@ -366,7 +366,7 @@ dat1 %>% uncount(blh_mix_count) %>%
     ## 
     ## Response: Distances
     ##            Df Sum Sq  Mean Sq      F N.Perm Pr(>F)  
-    ## Groups      1 0.0632 0.063242 3.1987    999  0.076 .
+    ## Groups      1 0.0632 0.063242 3.1987    999  0.073 .
     ## Residuals 224 4.4288 0.019771                       
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -374,17 +374,17 @@ dat1 %>% uncount(blh_mix_count) %>%
     ## Contrast: 0_1 
     ## 
     ##             average      sd   ratio     ava     avb cumsum     p  
-    ## Bassia      0.11094 0.11303 0.98150 0.64970 0.71010  0.161 0.033 *
-    ## Solanum     0.08860 0.10457 0.84730 0.49040 0.47830  0.289 0.171  
-    ## Salsola     0.08680 0.10213 0.84990 0.49680 0.52170  0.415 0.013 *
-    ## Sisymbrium  0.08158 0.11107 0.73450 0.32480 0.31880  0.533 0.243  
+    ## Bassia      0.11094 0.11303 0.98150 0.64970 0.71010  0.161 0.045 *
+    ## Solanum     0.08860 0.10457 0.84730 0.49040 0.47830  0.289 0.161  
+    ## Salsola     0.08680 0.10213 0.84990 0.49680 0.52170  0.415 0.022 *
+    ## Sisymbrium  0.08158 0.11107 0.73450 0.32480 0.31880  0.533 0.237  
     ## Kali        0.06180 0.08124 0.76070 0.37580 0.21740  0.623 0.595  
-    ## Lactuca     0.05518 0.08604 0.64130 0.29300 0.15940  0.703 0.803  
-    ## Chenopodium 0.04831 0.08020 0.60230 0.27390 0.17390  0.773 0.664  
-    ## Amaranthus  0.04824 0.09729 0.49580 0.36310 0.04350  0.843 0.997  
-    ## Descurainia 0.04560 0.08151 0.55940 0.15290 0.21740  0.909 0.073 .
-    ## Brassica    0.03963 0.07197 0.55070 0.22930 0.10140  0.967 0.917  
-    ## Raphanus    0.02311 0.05988 0.38600 0.17200 0.04350  1.000 0.901  
+    ## Lactuca     0.05518 0.08604 0.64130 0.29300 0.15940  0.703 0.784  
+    ## Chenopodium 0.04831 0.08020 0.60230 0.27390 0.17390  0.773 0.658  
+    ## Amaranthus  0.04824 0.09729 0.49580 0.36310 0.04350  0.843 0.989  
+    ## Descurainia 0.04560 0.08151 0.55940 0.15290 0.21740  0.909 0.078 .
+    ## Brassica    0.03963 0.07197 0.55070 0.22930 0.10140  0.967 0.922  
+    ## Raphanus    0.02311 0.05988 0.38600 0.17200 0.04350  1.000 0.921  
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## Permutation: free
@@ -454,53 +454,29 @@ dat1 %>% uncount(blh_mix_count) %>%
     [1] stats     graphics  grDevices utils     datasets  methods   base     
 
     other attached packages:
-     [1] randomForest_4.7-1.1 gamm4_0.2-6          mgcv_1.8-42         
-     [4] nlme_3.1-162         lme4_1.1-35.3        Matrix_1.5-3        
-     [7] ggrepel_0.9.5        ggExtra_0.10.1       knitr_1.47          
-    [10] ggridges_0.5.6       yardstick_1.3.1      workflowsets_1.1.0  
-    [13] workflows_1.1.4      tune_1.2.1           rsample_1.2.1       
-    [16] recipes_1.0.10       parsnip_1.2.1        modeldata_1.3.0     
-    [19] infer_1.0.7          dials_1.2.1          scales_1.3.0        
-    [22] broom_1.0.6          tidymodels_1.2.0     sjPlot_2.8.16       
-    [25] glmmTMB_1.1.9        emmeans_1.10.2       vegan_2.6-6.1       
-    [28] lattice_0.20-45      permute_0.9-7        cowplot_1.1.3       
-    [31] lubridate_1.9.3      forcats_1.0.0        stringr_1.5.1       
-    [34] dplyr_1.1.4          purrr_1.0.2          readr_2.1.5         
-    [37] tidyr_1.3.1          tibble_3.2.1         ggplot2_3.5.1       
-    [40] tidyverse_2.0.0     
+     [1] gamm4_0.2-6     mgcv_1.8-42     nlme_3.1-162    lme4_1.1-35.3  
+     [5] Matrix_1.5-3    ggrepel_0.9.5   ggExtra_0.10.1  knitr_1.47     
+     [9] ggridges_0.5.6  sjPlot_2.8.16   vegan_2.6-6.1   lattice_0.20-45
+    [13] permute_0.9-7   cowplot_1.1.3   lubridate_1.9.3 forcats_1.0.0  
+    [17] stringr_1.5.1   dplyr_1.1.4     purrr_1.0.2     readr_2.1.5    
+    [21] tidyr_1.3.1     tibble_3.2.1    ggplot2_3.5.1   tidyverse_2.0.0
 
     loaded via a namespace (and not attached):
-      [1] backports_1.5.0     plyr_1.8.9          TMB_1.9.11         
-      [4] splines_4.2.3       listenv_0.9.1       TH.data_1.1-2      
-      [7] digest_0.6.35       foreach_1.5.2       htmltools_0.5.8.1  
-     [10] fansi_1.0.6         memoise_2.0.1       checkmate_2.3.1    
-     [13] magrittr_2.0.3      cluster_2.1.4       tzdb_0.4.0         
-     [16] globals_0.16.3      gower_1.0.1         sandwich_3.1-0     
-     [19] hardhat_1.4.0       timechange_0.3.0    colorspace_2.1-0   
-     [22] haven_2.5.4         xfun_0.44           survival_3.5-3     
-     [25] zoo_1.8-12          iterators_1.0.14    glue_1.7.0         
-     [28] gtable_0.3.5        ipred_0.9-14        sjstats_0.19.0     
-     [31] sjmisc_2.8.10       future.apply_1.11.2 mvtnorm_1.2-5      
-     [34] ggeffects_1.6.0     miniUI_0.1.1.1      Rcpp_1.0.12        
-     [37] isoband_0.2.7       viridisLite_0.4.2   xtable_1.8-4       
-     [40] performance_0.15.3  GPfit_1.0-8         lava_1.8.0         
-     [43] prodlim_2023.08.28  datawizard_1.3.0    RColorBrewer_1.1-3 
-     [46] pkgconfig_2.0.3     farver_2.1.2        nnet_7.3-18        
-     [49] utf8_1.2.4          tidyselect_1.2.1    labeling_0.4.3     
-     [52] rlang_1.1.4         DiceDesign_1.10     later_1.3.2        
-     [55] cachem_1.1.0        munsell_0.5.1       tools_4.2.3        
-     [58] cli_3.6.2           generics_0.1.3      sjlabelled_1.2.0   
-     [61] evaluate_0.24.0     fastmap_1.2.0       yaml_2.3.8         
-     [64] future_1.33.2       mime_0.12           compiler_4.2.3     
-     [67] rstudioapi_0.16.0   lhs_1.1.6           stringi_1.8.4      
-     [70] highr_0.11          nloptr_2.0.3        vctrs_0.6.5        
-     [73] pillar_1.9.0        lifecycle_1.0.4     furrr_0.3.1        
-     [76] estimability_1.5.1  data.table_1.15.4   insight_1.4.4      
-     [79] httpuv_1.6.15       R6_2.5.1            promises_1.3.0     
-     [82] parallelly_1.37.1   codetools_0.2-19    boot_1.3-28.1      
-     [85] MASS_7.3-58.2       rprojroot_2.0.4     withr_3.0.0        
-     [88] multcomp_1.4-25     parallel_4.2.3      hms_1.1.3          
-     [91] metR_0.17.0         grid_4.2.3          rpart_4.1.23       
-     [94] timeDate_4032.109   coda_0.19-4.1       class_7.3-21       
-     [97] minqa_1.2.7         rmarkdown_2.27      numDeriv_2016.8-1.1
-    [100] shiny_1.8.1.1      
+     [1] insight_1.4.4      RColorBrewer_1.1-3 rprojroot_2.0.4    tools_4.2.3       
+     [5] backports_1.5.0    utf8_1.2.4         R6_2.5.1           sjlabelled_1.2.0  
+     [9] colorspace_2.1-0   withr_3.0.0        tidyselect_1.2.1   compiler_4.2.3    
+    [13] performance_0.15.3 cli_3.6.2          isoband_0.2.7      labeling_0.4.3    
+    [17] scales_1.3.0       checkmate_2.3.1    metR_0.17.0        digest_0.6.35     
+    [21] minqa_1.2.7        rmarkdown_2.27     pkgconfig_2.0.3    htmltools_0.5.8.1 
+    [25] fastmap_1.2.0      highr_0.11         rlang_1.1.4        rstudioapi_0.16.0 
+    [29] shiny_1.8.1.1      generics_0.1.3     farver_2.1.2       magrittr_2.0.3    
+    [33] Rcpp_1.0.12        munsell_0.5.1      fansi_1.0.6        lifecycle_1.0.4   
+    [37] stringi_1.8.4      yaml_2.3.8         MASS_7.3-58.2      plyr_1.8.9        
+    [41] grid_4.2.3         parallel_4.2.3     promises_1.3.0     sjmisc_2.8.10     
+    [45] miniUI_0.1.1.1     ggeffects_1.6.0    haven_2.5.4        splines_4.2.3     
+    [49] sjstats_0.19.0     hms_1.1.3          pillar_1.9.0       boot_1.3-28.1     
+    [53] glue_1.7.0         evaluate_0.24.0    data.table_1.15.4  vctrs_0.6.5       
+    [57] nloptr_2.0.3       tzdb_0.4.0         httpuv_1.6.15      gtable_0.3.5      
+    [61] datawizard_1.3.0   cachem_1.1.0       xfun_0.44          mime_0.12         
+    [65] xtable_1.8-4       later_1.3.2        viridisLite_0.4.2  memoise_2.0.1     
+    [69] cluster_2.1.4      timechange_0.3.0  

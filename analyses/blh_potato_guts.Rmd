@@ -54,16 +54,13 @@ knitr::opts_chunk$set(warning = F, message = F, collapse = T, cache = F,
 library(tidyverse) # Needed for data wrangling: dplyr, tidyr, ggplot2
 library(cowplot) # Needed for publication-quality ggplots
 library(vegan)
-library(emmeans)
-library(glmmTMB)
 library(sjPlot)
-library(tidymodels)
 library(ggridges)
 library(knitr)
 library(ggExtra)
 library(ggrepel)
 library(gamm4)
-library(randomForest)
+
 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # @@@@@ Data Preparation
