@@ -31,7 +31,7 @@ Meta data describing all columns can be found in [/data/meta_data](https://githu
 [gamm4](https://cran.r-project.org/web/packages/gamm4/index.html)
 
 ## Funding:
-This research was funded by (Need to add this info)
+This research was funded by USDA SCRI #1031438; USDA Hatch #1014754; USDA ARS 2092-22000-021-44-S.
 
 ## Contacts:
 

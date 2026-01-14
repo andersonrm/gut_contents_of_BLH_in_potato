@@ -67,7 +67,7 @@ library(gamm4)
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 # Import datasets
-dat1 <- read.csv("data/gut_contents_full_CW.csv")
+dat1 <- read.csv("data/gut_contents.csv")
 
 crop_type <- read.csv("data/crop_types.csv")
 
