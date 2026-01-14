@@ -19,6 +19,9 @@ All analyses are stored in the [/analyses](https://github.com/andersonrm/gut_con
 
 Meta data describing all columns can be found in [/data/meta_data](https://github.com/andersonrm/gut_contents_of_BLH_in_potato/tree/main/data/meta_data)
 
+## Funding:
+This research was funded by (Need to add this info)
+
 ## Contacts:
 
 Camille Wagstaff <mailto:camille.wagstaff@wsu.edu>
