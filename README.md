@@ -6,9 +6,7 @@ This repository contains all data and code used in Wagstaff et al. 2026, Annals 
 ## Authors:
 
 [Riley M. Anderson^1^](https://github.com/andersonrm)
-
-
-Camille Wagstaff^1^
+Camille Wagstaff<sup>1</sup>
 
 ^1^*Dept. of Entomology, Washington State University, Pullman, WA USA*
 
