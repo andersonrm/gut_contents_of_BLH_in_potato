@@ -32,7 +32,7 @@ January 14, 2026
 | Mustard         |     3 |    1 |   1 |       2 |           1 |
 | Pigweed         |    11 |    0 |   2 |       9 |           0 |
 | Potato          |    16 |    8 |   1 |       8 |           1 |
-| Russian thistle |    65 |   20 |  34 |      24 |          14 |
+| Russian thistle |    64 |   20 |  34 |      24 |          14 |
 | Tumble mustard  |    40 |   14 |   9 |      23 |           6 |
 
 ### Table of plants found in guts and their proportions and counts:
@@ -181,7 +181,7 @@ dat1 %>%
 # number of tested BLH:
 dat1 %>% uncount(blh_mix_count) %>% select(BLH_ID) %>% 
   distinct() %>% nrow()
-## [1] 225
+## [1] 226
 ```
 
 ``` r
@@ -349,14 +349,14 @@ dat1 %>% uncount(blh_mix_count) %>%
     ## 
     ## adonis2(formula = gut_mat_species ~ splines::ns(sample_date, df = 5) + BCTV * Year + CPt + region, data = gut_matrix, strata = gut_matrix$host_plant)
     ##                                   Df SumOfSqs      R2       F Pr(>F)    
-    ## splines::ns(sample_date, df = 5)   5   10.070 0.16580 10.6289  0.001 ***
-    ## BCTV                               1    0.763 0.01257  4.0286  0.003 ** 
-    ## Year                               2    8.156 0.13429 21.5222  0.001 ***
-    ## CPt                                1    0.312 0.00513  1.6459  0.225    
-    ## region                             4    0.987 0.01625  1.3023  0.524    
-    ## BCTV:Year                          2    0.656 0.01080  1.7305  0.178    
-    ## Residual                         210   39.790 0.65516                   
-    ## Total                            225   60.733 1.00000                   
+    ## splines::ns(sample_date, df = 5)   5   10.062 0.16547 10.5879  0.001 ***
+    ## BCTV                               1    0.727 0.01195  3.8232  0.005 ** 
+    ## Year                               2    8.161 0.13421 21.4685  0.001 ***
+    ## CPt                                1    0.306 0.00503  1.6078  0.267    
+    ## region                             4    0.994 0.01635  1.3073  0.501    
+    ## BCTV:Year                          2    0.644 0.01059  1.6945  0.181    
+    ## Residual                         210   39.914 0.65640                   
+    ## Total                            225   60.807 1.00000                   
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
@@ -366,25 +366,25 @@ dat1 %>% uncount(blh_mix_count) %>%
     ## 
     ## Response: Distances
     ##            Df Sum Sq  Mean Sq      F N.Perm Pr(>F)  
-    ## Groups      1 0.0632 0.063242 3.1987    999  0.079 .
-    ## Residuals 224 4.4288 0.019771                       
+    ## Groups      1 0.0661 0.066125 3.3202    999  0.075 .
+    ## Residuals 224 4.4611 0.019916                       
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## Contrast: 0_1 
     ## 
     ##             average      sd   ratio     ava     avb cumsum     p  
-    ## Bassia      0.11094 0.11303 0.98150 0.64970 0.71010  0.161 0.034 *
-    ## Solanum     0.08860 0.10457 0.84730 0.49040 0.47830  0.289 0.165  
-    ## Salsola     0.08680 0.10213 0.84990 0.49680 0.52170  0.415 0.018 *
-    ## Sisymbrium  0.08158 0.11107 0.73450 0.32480 0.31880  0.533 0.212  
-    ## Kali        0.06180 0.08124 0.76070 0.37580 0.21740  0.623 0.608  
-    ## Lactuca     0.05518 0.08604 0.64130 0.29300 0.15940  0.703 0.771  
-    ## Chenopodium 0.04831 0.08020 0.60230 0.27390 0.17390  0.773 0.670  
-    ## Amaranthus  0.04824 0.09729 0.49580 0.36310 0.04350  0.843 0.996  
-    ## Descurainia 0.04560 0.08151 0.55940 0.15290 0.21740  0.909 0.063 .
-    ## Brassica    0.03963 0.07197 0.55070 0.22930 0.10140  0.967 0.914  
-    ## Raphanus    0.02311 0.05988 0.38600 0.17200 0.04350  1.000 0.927  
+    ## Bassia      0.10943 0.11305 0.96800 0.64330 0.69570  0.159 0.053 .
+    ## Solanum     0.08911 0.10510 0.84780 0.49040 0.47830  0.288 0.188  
+    ## Salsola     0.08733 0.10273 0.85020 0.49680 0.52170  0.415 0.013 *
+    ## Sisymbrium  0.08160 0.11159 0.73130 0.31850 0.31880  0.533 0.226  
+    ## Kali        0.06200 0.08149 0.76080 0.37580 0.21740  0.623 0.623  
+    ## Lactuca     0.05493 0.08637 0.63600 0.28660 0.15940  0.703 0.799  
+    ## Chenopodium 0.04844 0.08041 0.60240 0.27390 0.17390  0.773 0.665  
+    ## Amaranthus  0.04835 0.09750 0.49590 0.36310 0.04350  0.843 0.991  
+    ## Descurainia 0.04546 0.08196 0.55460 0.14650 0.21740  0.909 0.056 .
+    ## Brassica    0.03972 0.07209 0.55090 0.22930 0.10140  0.966 0.926  
+    ## Raphanus    0.02316 0.06001 0.38590 0.17200 0.04350  1.000 0.925  
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## Permutation: free
@@ -398,34 +398,34 @@ dat1 %>% uncount(blh_mix_count) %>%
     ## 
     ## Partitioning of squared Bray distance:
     ##               Inertia Proportion
-    ## Total         88.6349    1.00000
-    ## Constrained    0.9008    0.01016
-    ## Unconstrained 87.7341    0.98984
+    ## Total         88.4979    1.00000
+    ## Constrained    0.8823    0.00997
+    ## Unconstrained 87.6156    0.99003
     ## 
     ## Eigenvalues, and their contribution to the squared Bray distance 
     ## 
     ## Importance of components:
-    ##                          CAP1    MDS1    MDS2    MDS3   MDS4   MDS5    MDS6
-    ## Eigenvalue            0.90083 19.8687 13.0759 12.2121 8.9743 7.1086 5.27012
-    ## Proportion Explained  0.01016  0.2242  0.1475  0.1378 0.1012 0.0802 0.05946
-    ## Cumulative Proportion 0.01016  0.2343  0.3819  0.5196 0.6209 0.7011 0.76054
-    ##                          MDS7    MDS8    MDS9   MDS10   MDS11  MDS12    MDS13
-    ## Eigenvalue            4.85452 4.12628 3.82804 2.67618 1.71228 1.2145 0.804945
-    ## Proportion Explained  0.05477 0.04655 0.04319 0.03019 0.01932 0.0137 0.009082
-    ## Cumulative Proportion 0.81531 0.86187 0.90505 0.93525 0.95457 0.9683 0.977350
+    ##                          CAP1    MDS1    MDS2    MDS3   MDS4    MDS5    MDS6
+    ## Eigenvalue            0.88234 19.8617 13.2831 12.2654 8.9563 7.10027 5.24598
+    ## Proportion Explained  0.00997  0.2244  0.1501  0.1386 0.1012 0.08023 0.05928
+    ## Cumulative Proportion 0.00997  0.2344  0.3845  0.5231 0.6243 0.70453 0.76381
+    ##                          MDS7    MDS8   MDS9  MDS10  MDS11   MDS12    MDS13
+    ## Eigenvalue            4.76270 4.12634 3.8231 2.6376 1.7081 1.04528 0.793717
+    ## Proportion Explained  0.05382 0.04663 0.0432 0.0298 0.0193 0.01181 0.008969
+    ## Cumulative Proportion 0.81762 0.86425 0.9074 0.9373 0.9566 0.96837 0.977335
     ##                          MDS14    MDS15    MDS16    MDS17    MDS18    MDS19
-    ## Eigenvalue            0.560740 0.458900 0.308952 0.225898 0.195531 0.153772
-    ## Proportion Explained  0.006326 0.005177 0.003486 0.002549 0.002206 0.001735
-    ## Cumulative Proportion 0.983676 0.988854 0.992339 0.994888 0.997094 0.998829
+    ## Eigenvalue            0.562077 0.456406 0.308921 0.225590 0.195321 0.153833
+    ## Proportion Explained  0.006351 0.005157 0.003491 0.002549 0.002207 0.001738
+    ## Cumulative Proportion 0.983686 0.988843 0.992334 0.994883 0.997090 0.998828
     ##                           MDS20     MDS21
-    ## Eigenvalue            0.0741700 0.0296288
-    ## Proportion Explained  0.0008368 0.0003343
+    ## Eigenvalue            0.0741044 0.0295878
+    ## Proportion Explained  0.0008374 0.0003343
     ## Cumulative Proportion 0.9996657 1.0000000
     ## 
     ## Accumulated constrained eigenvalues
     ## Importance of components:
     ##                         CAP1
-    ## Eigenvalue            0.9008
+    ## Eigenvalue            0.8823
     ## Proportion Explained  1.0000
     ## Cumulative Proportion 1.0000
 
