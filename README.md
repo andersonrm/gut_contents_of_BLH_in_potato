@@ -1,6 +1,5 @@
 # Molecular Ecology of Host Use and Pathogen Acquisition by an Insect Vector in Potato Crop Fields
 
-
 This repository contains all data and code used in Wagstaff et al. 2026, Annals of the Entomological Society of America.
 
 ## Authors:
