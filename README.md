@@ -37,4 +37,4 @@ This research was funded by USDA SCRI #1031438; USDA Hatch #1014754; USDA ARS 20
 Camille Wagstaff <mailto:camille.wagstaff@wsu.edu>
 
 ## Associated publication:
----DOI to be linked when published---
+[DOI](https://doi.org/10.1093/aesa/saag007)
